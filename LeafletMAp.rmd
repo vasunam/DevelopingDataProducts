@@ -1,0 +1,29 @@
+---
+title: "My First Leaflet Map"
+author: "Namratha Vasu"
+date: "27 october 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## My First Leaflet Map
+Create a leaflet map object.
+```{r cars}
+library(leaflet)
+map <- leaflet() %>% addTiles()
+
+```
+
+
+
+Add the marker to the map and display the map.
+```{r}
+MAHE <- c("<a href= 'manipal.edu' >MAHE<br>'   title='Edu Building'></a>")
+map %>%
+   addTiles() %>%
+   addMarkers(lat=13.349, lng=74.7856, popup = MAHE)
+```
